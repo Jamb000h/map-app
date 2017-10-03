@@ -1,0 +1,166 @@
+[
+  {
+    "title": "The Restaurant 1",
+    "latitude": "60.192059",
+    "longitude": "24.945831",
+    "type": "Restaurant",
+    "description": "This is a restaurant.",
+    "address": "Postikatu 1 A 1",
+    "city": "Helsinki",
+    "services": [
+      "Lunch",
+      "Dinner",
+      "Catering",
+      "Drinks",
+      "Snacks"
+    ],
+    "openingHours": {
+      "monday": "00:00",
+      "tuesday": "02:00",
+      "wednesday": "00:00",
+      "thursday": "04:00",
+      "friday": "05:00",
+      "saturday": "06:00",
+      "sunday": "07:00"
+    },
+    "closingHours": {
+      "monday": "00:00",
+      "tuesday": "012:00",
+      "wednesday": "00:00",
+      "thursday": "21:30",
+      "friday": "22:00",
+      "saturday": "09:00",
+      "sunday": "11:59"
+    },
+    "tags": [
+      "Helsinki",
+      "Restaurant",
+      "24/7",
+      "Lunch",
+      "Dinner",
+      "Catering",
+      "Drinks",
+      "Snacks"
+    ]
+  },
+  {
+    "title": "The Restaurant 2",
+    "latitude": "60.292100",
+    "longitude": "24.845850",
+    "type": "Restaurant",
+    "description": "This is a restaurant 2.",
+    "address": "Postikatu 1 A 2",
+    "city": "Helsinki",
+    "services": [
+      "Drinks",
+      "Snacks"
+    ],
+    "openingHours": {
+      "monday": "00:00",
+      "tuesday": "00:00",
+      "wednesday": "01:00",
+      "thursday": "04:00",
+      "friday": "05:00",
+      "saturday": "06:00",
+      "sunday": "07:00"
+    },
+    "closingHours": {
+      "monday": "00:00",
+      "tuesday": "012:00",
+      "wednesday": "18:00",
+      "thursday": "21:30",
+      "friday": "22:00",
+      "saturday": "09:00",
+      "sunday": "11:59"
+    },
+    "tags": [
+      "Helsinki",
+      "Restaurant",
+      "24/7",
+      "Drinks",
+      "Snacks"
+    ]
+  },
+  {
+    "title": "Le Cinema 1",
+    "latitude": "60.182250",
+    "longitude": "24.9545250",
+    "type": "Cinema",
+    "description": "This is a Cinema.",
+    "address": "Postikatu 1 B 1",
+    "city": "Helsinki",
+    "services": [
+      "Snacks",
+      "Movies",
+      "Popcorn"
+    ],
+    "openingHours": {
+      "monday": "12:00",
+      "tuesday": "12:00",
+      "wednesday": "12:00",
+      "thursday": "12:00",
+      "friday": "12:00",
+      "saturday": "12:00",
+      "sunday": "12:00"
+    },
+    "closingHours": {
+      "monday": "00:00",
+      "tuesday": "00:00",
+      "wednesday": "00:00",
+      "thursday": "00:00",
+      "friday": "00:00",
+      "saturday": "00:00",
+      "sunday": "00:00"
+    },
+    "tags": [
+      "Helsinki",
+      "Cinema",
+      "Movies",
+      "Snacks",
+      "Popcorn"
+    ]
+  },
+  {
+    "title": "Le Cinema 2",
+    "latitude": "60.182250",
+    "longitude": "24.845250",
+    "type": "Cinema",
+    "description": "This is a Cinema 2.",
+    "address": "Postikatu 1 B 2",
+    "city": "Helsinki",
+    "services": [
+      "Snacks",
+      "Movies",
+      "Popcorn",
+      "Drinks",
+      "Art Gallery"
+    ],
+    "openingHours": {
+      "monday": "13:00",
+      "tuesday": "13:00",
+      "wednesday": "13:00",
+      "thursday": "13:00",
+      "friday": "13:00",
+      "saturday": "13:00",
+      "sunday": "13:00"
+    },
+    "closingHours": {
+      "monday": "23:00",
+      "tuesday": "23:00",
+      "wednesday": "23:00",
+      "thursday": "23:00",
+      "friday": "23:00",
+      "saturday": "23:00",
+      "sunday": "32:00"
+    },
+    "tags": [
+      "Helsinki",
+      "Cinema",
+      "Movies",
+      "Snacks",
+      "Popcorn",
+      "Art",
+      "Drinks"
+    ]
+  }
+]

@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+.map-marker {
+  color: black;
+}
+
+.mapWrapper {
+  width: 80%;
+  height: 100%;
+}
+
+.pointList {
+  width: 20%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.map-marker-popup {
+  display: none;
+  width: 150px;
+  background-color: white;
+  z-index: 15;
+  position: absolute;
+}
+
+.mapPointMarker {
+  width: 3em;
+  cursor: pointer;
+}
