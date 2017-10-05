@@ -34,13 +34,26 @@ ul {
 
 .map-marker-popup {
   display: none;
-  width: 150px;
+  width: auto;
   background-color: white;
   z-index: 15;
   position: absolute;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
 }
 
 .mapPointMarker {
   width: 3em;
   cursor: pointer;
+}
+
+thead td {
+  border-bottom: solid 2px black;
+  margin: 0;
+}
+
+td {
+  padding: 3px 6px 3px 0px;
+  vertical-align: top;
 }

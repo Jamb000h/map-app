@@ -14,24 +14,66 @@
       "Drinks",
       "Snacks"
     ],
-    "openingHours": {
-      "monday": "00:00",
-      "tuesday": "02:00",
-      "wednesday": "00:00",
-      "thursday": "04:00",
-      "friday": "05:00",
-      "saturday": "06:00",
-      "sunday": "07:00"
-    },
-    "closingHours": {
-      "monday": "00:00",
-      "tuesday": "012:00",
-      "wednesday": "00:00",
-      "thursday": "21:30",
-      "friday": "22:00",
-      "saturday": "09:00",
-      "sunday": "11:59"
-    },
+    "openingHours": [
+      {
+        "day": "monday",
+        "time": "00:00"
+      },
+      {
+        "day": "tuesday",
+        "time": "02:00"
+      },
+      {
+        "day": "wednesday",
+        "time": "00:00"
+      },
+      {
+        "day": "thursday",
+        "time": "04:00"
+      },
+      {
+        "day": "friday",
+        "time": "05:00"
+      },
+      {
+        "day": "saturday",
+        "time": "06:00"
+      },
+      {
+        "day": "sunday",
+        "time": "07:00"
+      }
+    ],
+    "closingHours": [
+      {
+        "day": "monday",
+        "time": "00:00"
+      },
+      {
+        "day": "tuesday",
+        "time": "12:00"
+      },
+      {
+        "day": "wednesday",
+        "time": "00:00"
+      },
+      {
+        "day": "thursday",
+        "time": "21:30"
+      },
+      {
+        "day": "friday",
+        "time": "22:00"
+      },
+      {
+        "day": "saturday",
+        "time": "09:00"
+      },
+      {
+        "day": "sunday",
+        "time": "11:59"
+      }
+    ],
     "tags": [
       "Helsinki",
       "Restaurant",
@@ -55,24 +97,66 @@
       "Drinks",
       "Snacks"
     ],
-    "openingHours": {
-      "monday": "00:00",
-      "tuesday": "00:00",
-      "wednesday": "01:00",
-      "thursday": "04:00",
-      "friday": "05:00",
-      "saturday": "06:00",
-      "sunday": "07:00"
-    },
-    "closingHours": {
-      "monday": "00:00",
-      "tuesday": "012:00",
-      "wednesday": "18:00",
-      "thursday": "21:30",
-      "friday": "22:00",
-      "saturday": "09:00",
-      "sunday": "11:59"
-    },
+    "openingHours": [
+      {
+        "day": "monday",
+        "time": "00:00"
+      },
+      {
+        "day": "tuesday",
+        "time": "02:00"
+      },
+      {
+        "day": "wednesday",
+        "time": "00:00"
+      },
+      {
+        "day": "thursday",
+        "time": "04:00"
+      },
+      {
+        "day": "friday",
+        "time": "05:00"
+      },
+      {
+        "day": "saturday",
+        "time": "06:00"
+      },
+      {
+        "day": "sunday",
+        "time": "07:00"
+      }
+    ],
+    "closingHours": [
+      {
+        "day": "monday",
+        "time": "00:00"
+      },
+      {
+        "day": "tuesday",
+        "time": "12:00"
+      },
+      {
+        "day": "wednesday",
+        "time": "00:00"
+      },
+      {
+        "day": "thursday",
+        "time": "21:30"
+      },
+      {
+        "day": "friday",
+        "time": "22:00"
+      },
+      {
+        "day": "saturday",
+        "time": "09:00"
+      },
+      {
+        "day": "sunday",
+        "time": "11:59"
+      }
+    ],
     "tags": [
       "Helsinki",
       "Restaurant",
@@ -94,24 +178,66 @@
       "Movies",
       "Popcorn"
     ],
-    "openingHours": {
-      "monday": "12:00",
-      "tuesday": "12:00",
-      "wednesday": "12:00",
-      "thursday": "12:00",
-      "friday": "12:00",
-      "saturday": "12:00",
-      "sunday": "12:00"
-    },
-    "closingHours": {
-      "monday": "00:00",
-      "tuesday": "00:00",
-      "wednesday": "00:00",
-      "thursday": "00:00",
-      "friday": "00:00",
-      "saturday": "00:00",
-      "sunday": "00:00"
-    },
+    "openingHours": [
+      {
+        "day": "monday",
+        "time": "00:00"
+      },
+      {
+        "day": "tuesday",
+        "time": "02:00"
+      },
+      {
+        "day": "wednesday",
+        "time": "00:00"
+      },
+      {
+        "day": "thursday",
+        "time": "04:00"
+      },
+      {
+        "day": "friday",
+        "time": "05:00"
+      },
+      {
+        "day": "saturday",
+        "time": "06:00"
+      },
+      {
+        "day": "sunday",
+        "time": "07:00"
+      }
+    ],
+    "closingHours": [
+      {
+        "day": "monday",
+        "time": "00:00"
+      },
+      {
+        "day": "tuesday",
+        "time": "12:00"
+      },
+      {
+        "day": "wednesday",
+        "time": "00:00"
+      },
+      {
+        "day": "thursday",
+        "time": "21:30"
+      },
+      {
+        "day": "friday",
+        "time": "22:00"
+      },
+      {
+        "day": "saturday",
+        "time": "09:00"
+      },
+      {
+        "day": "sunday",
+        "time": "11:59"
+      }
+    ],
     "tags": [
       "Helsinki",
       "Cinema",
@@ -135,24 +261,66 @@
       "Drinks",
       "Art Gallery"
     ],
-    "openingHours": {
-      "monday": "13:00",
-      "tuesday": "13:00",
-      "wednesday": "13:00",
-      "thursday": "13:00",
-      "friday": "13:00",
-      "saturday": "13:00",
-      "sunday": "13:00"
-    },
-    "closingHours": {
-      "monday": "23:00",
-      "tuesday": "23:00",
-      "wednesday": "23:00",
-      "thursday": "23:00",
-      "friday": "23:00",
-      "saturday": "23:00",
-      "sunday": "32:00"
-    },
+    "openingHours": [
+      {
+        "day": "monday",
+        "time": "00:00"
+      },
+      {
+        "day": "tuesday",
+        "time": "02:00"
+      },
+      {
+        "day": "wednesday",
+        "time": "00:00"
+      },
+      {
+        "day": "thursday",
+        "time": "04:00"
+      },
+      {
+        "day": "friday",
+        "time": "05:00"
+      },
+      {
+        "day": "saturday",
+        "time": "06:00"
+      },
+      {
+        "day": "sunday",
+        "time": "07:00"
+      }
+    ],
+    "closingHours": [
+      {
+        "day": "monday",
+        "time": "00:00"
+      },
+      {
+        "day": "tuesday",
+        "time": "12:00"
+      },
+      {
+        "day": "wednesday",
+        "time": "00:00"
+      },
+      {
+        "day": "thursday",
+        "time": "21:30"
+      },
+      {
+        "day": "friday",
+        "time": "22:00"
+      },
+      {
+        "day": "saturday",
+        "time": "09:00"
+      },
+      {
+        "day": "sunday",
+        "time": "11:59"
+      }
+    ],
     "tags": [
       "Helsinki",
       "Cinema",
