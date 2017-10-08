@@ -7,17 +7,32 @@ class SimpleMap extends Component {
     super(props)
 
     this.state = {
-      mapPoints: this.props.mapPoints
+      mapPoints: this.props.mapPoints,
+      editMode: this.props.editMode
     }
   }
 
   static defaultProps = {
-    center: {lat: 60.192059, lng: 24.945831},
+    center: {lat: 60.192059, lng: 24.945831}, // Helsinki
     zoom: 11
   };
 
-  render() {
+  componentWillReceiveProps = nextProps => {
+    this.setState({
+      mapPoints: nextProps.mapPoints,
+      editMode: nextProps.editMode
+    })
+  }
 
+  handleNewMapPoint = event => {
+    this.props.onNewMapPoint(event)
+  }
+
+  handleChildClick = event => {
+    console.log("cheers");
+  }
+
+  render() {
     const points = 
       this.state.mapPoints.map( (point, index) => {
         return (
@@ -33,8 +48,18 @@ class SimpleMap extends Component {
     return (
       <div className="mapWrapper">
         <GoogleMapReact
+          bootstrapURLKeys={{
+            key: 'AIzaSyBivuF4JYT0fg7cFCa-Ork7fvMiMVq6ujU '
+          }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
+          onChildMouseDown={() => {}}
+          onChildClick={this.handleChildClick}
+          onClick={ (event) => {
+            console.log("asd")
+              this.state.editMode ? this.handleNewMapPoint(event) : undefined
+            }
+          }
         >
           {points}
         </GoogleMapReact>
