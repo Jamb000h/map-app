@@ -6,15 +6,19 @@
 
 html, body {
   height: 100%;
+  width: 100%;
 }
 
 #root {
   height: 100%;
+  width: 100%;
 }
 
 .App {
   text-align: center;
   height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .map-marker {
@@ -22,14 +26,18 @@ html, body {
 }
 
 .mapWrapper {
+  position: absolute;
   width: 80%;
-  height: 100%;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .pointList {
   width: 20%;
   position: absolute;
-  top: 0;
+  top: 50px;
   right: 0;
 }
 
@@ -44,8 +52,7 @@ ul {
   background-color: white;
   z-index: 15;
   position: absolute;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 15px;
   text-align: left;
 }
 
@@ -65,19 +72,93 @@ td {
 }
 
 .navigationPanel {
-  height: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  position: absolute;
   width: 100%;
+  top: 0;
+  left: 0;
+  height: 40px;
+  padding-top: 10px;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 label {
   user-select: none;
   cursor: pointer;
   padding: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 input[type="checkbox"] {
   padding: 5px;
   margin: 5px;
+}
+
+/* PointModal */
+
+.pointModal {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  text-align: center;
+}
+
+.pointModal .pointModalTitle {
+  margin-top: 20px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.pointModal form {
+  width: 500px;
+  margin: 0 auto 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+.pointModal form {
+  width: 90%;
+  margin-left: 5%;
+  }
+}
+
+.pointModal form * {
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+.pointModal form label {
+  padding: 5px 0;
+  cursor: initial;
+}
+
+.pointModal form input, .pointModal form textarea {
+  padding: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  max-width: 100%;
+  min-width: 100%;
+  font-size: 1em;
+}
+
+.pointModal form select {
+  padding-left: 12px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  max-width: 100%;
+  min-width: 100%;
+  font-size: 1em;
+}
+
+.pointModal form select option {
+  padding: 15px;
 }

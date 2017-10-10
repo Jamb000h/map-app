@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-// MAP API KEY AIzaSyBivuF4JYT0fg7cFCa-Ork7fvMiMVq6ujU 
-
 class Point extends Component {
   handleMarkerHover = (event) => {
     console.log("Marker")
@@ -18,9 +16,17 @@ class Point extends Component {
   render () {
 
     return (
-      <div className="map-marker" data-id={this.props.key}>
-        <img src={require('./mapPointMarker.png')} className="mapPointMarker" onMouseOver={this.handleMarkerHover} onMouseLeave={this.handleMarkerHover} alt="Marker" />
-        <div className="map-marker-popup" data-id={this.props.key}>
+      <div className="map-marker">
+        <img
+          src={require('./mapPointMarker.png')}
+          className="mapPointMarker"
+          onClick={this.props.onMarkerClick}
+          onMouseOver={this.handleMarkerHover}
+          onMouseLeave={this.handleMarkerHover}
+          onTouchStart={this.handleMarkerHover}
+          onTouchCancel={this.handleMarkerHover}
+          alt="Marker" />
+        <div className="map-marker-popup">
           <h3>{this.props.data.title}</h3>
           <p>
             {this.props.data.address}
@@ -40,7 +46,7 @@ class Point extends Component {
             </thead>
             <tbody>
               <tr>
-                {this.props.data.openingHours.map(this.renderDates)}
+                {this.props.data.openingHours ? this.props.data.openingHours.map(this.renderDates) : <td>No data available</td>}
               </tr>
             </tbody>
           </table>

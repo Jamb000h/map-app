@@ -15,7 +15,6 @@ class PointList extends Component {
   }
   
   render() {
-    console.log(this.state.mapPoints)
     const points = this.state.mapPoints.map( (point, index) => {
       return (
         <li key={index}>

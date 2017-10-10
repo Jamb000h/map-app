@@ -4,29 +4,30 @@ class NavigationPanel extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      editMode: this.props.editMode
+      mode: this.props.mode
     }
   }
 
   componentWillReceiveProps = nextProps => {
     this.setState({
-      editMode: nextProps.editMode
+      mode: nextProps.mode
     })
   }
 
-  handleModeChange = event => {
-    this.props.onModeChange(event)
+  handleToggleEditMode = event => {
+    this.props.onToggleEditMode(event)
   }
   
   render() {
+
     return (
       <div className="navigationPanel">
         <label>
           Edit mode
           <input
             type="checkbox"
-            checked={this.props.editMode}
-            onChange={this.handleModeChange}
+            checked={this.state.mode === 'edit' ? true : false}
+            onChange={this.handleToggleEditMode}
           />
         </label>
       </div>

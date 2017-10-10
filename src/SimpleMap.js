@@ -8,8 +8,9 @@ class SimpleMap extends Component {
 
     this.state = {
       mapPoints: this.props.mapPoints,
-      editMode: this.props.editMode
+      mode: this.props.mode
     }
+    
   }
 
   static defaultProps = {
@@ -20,7 +21,7 @@ class SimpleMap extends Component {
   componentWillReceiveProps = nextProps => {
     this.setState({
       mapPoints: nextProps.mapPoints,
-      editMode: nextProps.editMode
+      mode: nextProps.mode
     })
   }
 
@@ -28,8 +29,25 @@ class SimpleMap extends Component {
     this.props.onNewMapPoint(event)
   }
 
-  handleChildClick = event => {
-    console.log("cheers");
+  handleEditMapPoint = (event, index) => {
+    this.props.onEditMapPoint(event, index)
+  }
+
+  fetchPlaces = (map, maps) => {
+    var helsinki = new maps.LatLng(60.192059,24.945831);
+
+    var request = {
+      location: helsinki,
+      radius: '500',
+      query: 'restaurant'
+    };
+
+    var callback = function(data) {
+      console.log(data)
+    }
+
+    var service = new maps.places.PlacesService(map);
+    service.textSearch(request, callback);
   }
 
   render() {
@@ -41,6 +59,10 @@ class SimpleMap extends Component {
           lat={point.latitude}
           lng={point.longitude}
           data={point}
+          onMarkerClick={ event => {
+            this.state.mode === 'edit' ? this.handleEditMapPoint(event, index) : null
+            }
+          }
         />
         )
       })
@@ -48,16 +70,16 @@ class SimpleMap extends Component {
     return (
       <div className="mapWrapper">
         <GoogleMapReact
+          onGoogleApiLoaded={({map, maps}) => this.fetchPlaces(map, maps)}
+          yesIWantToUseGoogleMapApiInternals={true}
           bootstrapURLKeys={{
-            key: 'AIzaSyBivuF4JYT0fg7cFCa-Ork7fvMiMVq6ujU '
+            key: 'AIzaSyBivuF4JYT0fg7cFCa-Ork7fvMiMVq6ujU'
           }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           onChildMouseDown={() => {}}
-          onChildClick={this.handleChildClick}
-          onClick={ (event) => {
-            console.log("asd")
-              this.state.editMode ? this.handleNewMapPoint(event) : undefined
+          onClick={ event => {
+              this.state.mode === 'edit' ? this.handleNewMapPoint(event) : null
             }
           }
         >
