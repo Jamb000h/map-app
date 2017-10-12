@@ -4,16 +4,33 @@ import SimpleMap from './SimpleMap'
 import PointList from './PointList'
 import NavigationPanel from './NavigationPanel'
 import PointModal from './PointModal'
+import axios from 'axios'
+
+const apiURL = 'http://ec2-34-253-186-58.eu-west-1.compute.amazonaws.com:3000'
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      data: require('./mockData.json'),
+      data: [],
       mode: 'view',
       pointModal: false,
       pointModalIndex: null
     }
+  }
+
+  componentDidMount = () => {
+    console.log("Fetch starting")
+    axios.get(apiURL + '/points')
+    .then( newData => {
+      console.log("Fetched this: ", newData.data)
+      this.setState( prevState => ({
+        data: newData.data
+      }))
+    })
+    .catch( error => {
+      console.log("Could not get points: ", error)
+    })
   }
 
   onNewMapPoint = event => {
@@ -22,22 +39,48 @@ class App extends Component {
       "latitude": event.lat,
       "longitude": event.lng
     }
-    this.setState( prevState => ({
-      data: [...prevState.data, newPoint]
-    }))
+    axios.post(apiURL + '/points', newPoint)
+    .then( data => {
+      this.setState( prevState => ({
+        data: [...prevState.data, data.data]
+      }))
+    })
+    .catch( error => {
+      console.log("Could not add point: ", error)
+    })
   }
 
   onEditMapPoint = (event, index) => {
     this.setState( prevState => ({
-      pointModal: !prevState.pointModal,
-      pointModalIndex: index
+      pointModal: true,
+      pointModalIndex: index,
+      pointModalMode: 'edit'
     }))
-    /* FUNCTIONALITY FOR REMOVING A POINT
+  }
+
+  onRemovePoint = (uuid) => {
+    console.log('Removing point with UUID ', uuid)
+    axios.delete(apiURL + '/points/' + uuid)
+    .then( data => {
+      this.setState( prevState => ({
+        data: prevState.data.filter( item => {
+          return item.uuid !== uuid
+        }),
+        pointModal: false,
+        pointModalIndex: null
+      }))
+      console.log('Removed point with UUID ', uuid)
+    })
+    .catch( error => {
+      console.log("Could not remove point: ", error)
+    })
+  }
+
+  onModalClose = () => {
     this.setState( prevState => ({
-      data: prevState.data.filter( (item, i) => {
-        return i !== index
-      })
-    }))*/
+      pointModal: false,
+      pointModalIndex: null
+    }))
   }
 
   onToggleEditMode = event => {
@@ -49,7 +92,13 @@ class App extends Component {
 
   render() {
     
-    const pointModal = this.state.pointModal ? <PointModal data={this.state.data[this.state.pointModalIndex]} /> : null;
+    const pointModal = this.state.pointModal ? 
+    <PointModal
+      data={this.state.data[this.state.pointModalIndex]}
+      mode={this.state.pointModalMode}
+      onRemovePoint={this.onRemovePoint}
+      onModalClose={this.onModalClose}
+    /> : null;
 
     return (
       <div className="App">

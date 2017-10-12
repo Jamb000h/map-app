@@ -5,7 +5,8 @@ class PointModal extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      data: this.props.data
+      data: this.props.data,
+      removeToggle: false
     }
   }
 
@@ -21,12 +22,24 @@ class PointModal extends Component {
     return;
   }
 
+  handleRemovePoint = event => {
+    this.props.onRemovePoint(this.state.data.uuid)
+  }
+
+  handleModalClose = event => {
+    this.props.onModalClose()
+  }
+
   render () {
 
     return (
     <div className="pointModal">
       <p className="pointModalTitle">
         Add, edit or remove point based on app state
+        <span
+          class="closeModal"
+          onClick={this.handleModalClose}
+        >CLOSE</span>
       </p>
       <p className="pointModalLatLng">
         Point LatLng (smaller font)
@@ -68,6 +81,13 @@ class PointModal extends Component {
         </textarea>
         
       </form>
+
+      <span
+        className="removeButton"
+        onClick={this.handleRemovePoint}
+      >
+        Remove Point
+      </span>
     </div>
     )
   }
