@@ -15,13 +15,14 @@ class PointList extends Component {
   }
   
   render() {
-    const points = this.state.mapPoints.map( (point, index) => {
+    const points = 
+    this.state.mapPoints.length > 0 ? this.state.mapPoints.map( (point, index) => {
       return (
         <li key={index}>
           <h2>{point.title}</h2>
         </li>
       )
-    })
+    }) : null
     return (
       <div className="pointList">
         <ul>

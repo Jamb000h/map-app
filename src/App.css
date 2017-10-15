@@ -27,8 +27,8 @@ html, body {
 
 .mapWrapper {
   position: absolute;
-  width: 80%;
-  top: 50px;
+  width: 100%;
+  top: 0px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -73,16 +73,27 @@ td {
 
 .navigationPanel {
   position: absolute;
-  width: 100%;
+  width: auto;
+  margin: 20px;
+  border-radius: 10px;
   top: 0;
   left: 0;
   height: 40px;
   padding-top: 10px;
-  background-color: #000000;
   color: #ffffff;
+  text-align: left;
+  padding: 20px 10px 10px 10px;
+  background-color: rgba(100, 100, 100, 0.8);
+  z-index: 50;
 }
 
-label {
+.navigationPanel * {
+  position: relative;
+  z-index: 60;
+  cursor: pointer;
+}
+
+label, p.formTitle {
   user-select: none;
   cursor: pointer;
   padding: 5px;
@@ -106,6 +117,7 @@ input[type="checkbox"] {
   left: 0;
   z-index: 10;
   text-align: center;
+  overflow-y: scroll;
 }
 
 .pointModal .pointModalTitle {
@@ -132,7 +144,7 @@ input[type="checkbox"] {
   width: 100%;
 }
 
-.pointModal form label {
+.pointModal form label, p.formTitle {
   padding: 5px 0;
   cursor: initial;
 }
@@ -169,17 +181,44 @@ input[type="checkbox"] {
   padding: 15px;
 }
 
-.removeButton {
+.cancelRemoveWrapper {
+  width: 500px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+span.removeButton, span.cancelButton {
   padding: 10px 15px;
   text-transform: uppercase;
-  border: 2px solid darkred;
+  border: 0px solid darkred;
   border-radius: 5px;
   background-color: darkred;
+  color: #ffffff;
+  font-size: 0.8em !important;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 10px;
+  width: 100% !important;
+  text-align: center;
+  padding: 10px 0;
+}
+
+input[type="submit"].addButton, input[type="submit"].updateButton {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border: 2px solid darkgreen;
+  border-radius: 5px;
+  background-color: darkgreen;
   color: #ffffff;
   font-size: 0.8em;
   cursor: pointer;
   margin-top: 20px;
-  display: inline-block;
+  display: block;
+  width: 100%;
+  min-width: auto;
+  text-align: center;
 }
 
 .closeModal {
@@ -189,10 +228,39 @@ input[type="checkbox"] {
   border-radius: 5px;
   background-color: darkred;
   color: #ffffff;
-  font-size: 0.8em;
+  font-size: 0.8em !important;
   cursor: pointer;
   margin-top: 20px;
   display: inline-block;
-  margin-right: -60px;
-  margin-left: 30px;
+  margin: 10px;
+  margin-bottom: 50px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
+
+.openingTimes * input {
+  width: 100% !important;
+  padding: 5px !important;
+  min-width: auto !important;
+  margin: 0 !important;
+}
+
+.openingTimes * td {
+  display: table-cell !important;
+  text-align: center !important;
+  width: calc(100% / 7);
+  padding: 5px;
+}
+
+.openingTimes * label {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-top: 30px;
 }

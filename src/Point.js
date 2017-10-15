@@ -6,14 +6,22 @@ class Point extends Component {
     event.target.nextSibling.style.display = event.target.nextSibling.style.display === 'block' ? 'none' : 'block'
   }
 
-  renderDates = (value, index) => {
-    if(value.time === '00:00' && this.props.data.closingHours[index].time === '00:00') {
-      return <td key={index}>24h</td>
-    } 
-    return <td key={index}>{value.time} - {this.props.data.closingHours[index].time}</td>
+  renderDates = () => {
+    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    const openingHours = days.map( day => {
+      const opensAt = 'opensAt'+day
+      const closesAt = 'closesAt'+day
+      if(this.props.data.openingHours[opensAt] === '00:00' && this.props.data.openingHours[closesAt] === '00:00') {
+        return <td key={day}>24h</td>
+      } 
+      return <td key={day}>{this.props.data.openingHours[opensAt]} - {this.props.data.openingHours[closesAt]}</td>
+    })
+    return openingHours
   }
 
   render () {
+
+    const openingHours = this.renderDates()
 
     return (
       <div className="map-marker">
@@ -46,7 +54,9 @@ class Point extends Component {
             </thead>
             <tbody>
               <tr>
-                {this.props.data.openingHours ? this.props.data.openingHours.map(this.renderDates) : <td>No data available</td>}
+                {openingHours.length > 0 ? 
+                openingHours
+                 : <td>No data available</td>}
               </tr>
             </tbody>
           </table>

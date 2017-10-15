@@ -34,6 +34,7 @@ class SimpleMap extends Component {
   }
 
   fetchPlaces = (map, maps) => {
+    console.log('Fetch from Google API starting')
     var helsinki = new maps.LatLng(60.192059,24.945831);
 
     var request = {
@@ -43,7 +44,7 @@ class SimpleMap extends Component {
     };
 
     var callback = function(data) {
-      console.log(data)
+      console.log('This is from Google API: ', data)
     }
 
     var service = new maps.places.PlacesService(map);
@@ -52,6 +53,7 @@ class SimpleMap extends Component {
 
   render() {
     const points = 
+      this.state.mapPoints.length > 0 ?
       this.state.mapPoints.map( (point, index) => {
         return (
         <Point
@@ -65,7 +67,7 @@ class SimpleMap extends Component {
           }
         />
         )
-      })
+      }) : null
 
     return (
       <div className="mapWrapper">
