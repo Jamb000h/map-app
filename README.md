@@ -4,6 +4,10 @@ A simple frontend that displays a Google map and then fetches points of interest
 
 Runs on [create-react-app] (https://github.com/facebookincubator/create-react-app).
 
+Features:
+- React
+- ES6
+
 ## Running the application
 
 ### Environment variables
