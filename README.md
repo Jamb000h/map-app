@@ -1,8 +1,8 @@
 # Map app
 
-A simple frontend that displays a Google map and then fetches points of interest from a [custom API] (https://github.com/Jamb000h/map-app-api) and allows adding, updating and deleting the points of interest.
+A simple frontend that displays a Google map and then fetches points of interest from a [custom API](https://github.com/Jamb000h/map-app-api) and allows adding, updating and deleting the points of interest.
 
-Runs on [create-react-app] (https://github.com/facebookincubator/create-react-app).
+Runs on [create-react-app](https://github.com/facebookincubator/create-react-app).
 
 Features:
 - React
@@ -37,4 +37,14 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-See the section about [deployment](#deployment) for more information.
+Easiest way to deploy is to install serve
+
+```
+npm install -g serve
+```
+
+and then run
+
+```
+serve -s build
+```
