@@ -170,18 +170,21 @@ class PointModal extends Component {
 
     return (
     <div className="pointModal">
-      <p className="pointModalTitle">
-        {pointModalTitle}
-        <span
+      <span
           className="closeModal"
           onClick={this.handleModalClose}
-        >CLOSE</span>
-      </p>
-      <p className="pointModalLatLng">
-        Latitude: {this.state.coords.lat}<br />
-        Longitude: {this.state.coords.lng}
-      </p>
+      >
+        CLOSE
+      </span>
       <form onSubmit={ this.state.mode === 'edit' ? this.handleUpdateMapPoint : this.handleAddNewMapPoint }>
+
+        <p className="pointModalTitle">
+          {pointModalTitle}
+        </p>
+        <p className="pointModalLatLng">
+          Latitude: {this.state.coords.lat}<br />
+          Longitude: {this.state.coords.lng}
+        </p>
 
         <label htmlFor="type">Type</label>
         <select

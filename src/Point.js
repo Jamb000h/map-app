@@ -60,6 +60,9 @@ class Point extends Component {
               </tr>
             </tbody>
           </table>
+          <p className="description">
+            { this.props.data.description ? this.props.data.description : '' }
+          </p>
         </div>
       </div>
     )
