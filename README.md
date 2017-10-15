@@ -48,3 +48,5 @@ and then run
 ```
 serve -s build
 ```
+
+and your app should be running on port 5000!
