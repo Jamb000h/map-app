@@ -10,6 +10,12 @@ Features:
 
 ## Running the application
 
+Install the dependencies with
+
+```
+npm install
+```
+
 ### Environment variables
 
 Supply your own .env file with the following
