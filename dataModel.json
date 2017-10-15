@@ -7,22 +7,20 @@
   "address": "Postikatu 1 A 1",
   "city": "Helsinki",
   "openingHours": {
-    "monday": "00:00",
-    "tuesday": "00:00",
-    "wednesday": "00:00",
-    "thursday": "00:00",
-    "friday": "00:00",
-    "saturday": "00:00",
-    "sunday": "00:00"
-  },
-  "closingHours": {
-    "monday": "00:00",
-    "tuesday": "00:00",
-    "wednesday": "00:00",
-    "thursday": "00:00",
-    "friday": "00:00",
-    "saturday": "00:00",
-    "sunday": "00:00"
+    "opensAtMonday": "00:00",
+    "opensAtTuesday": "00:00",
+    "opensAtWednesday": "00:00",
+    "opensAtThursday": "00:00",
+    "opensAtFriday": "00:00",
+    "opensAtSaturday": "00:00",
+    "opensAtSunday": "00:00",
+    "closesAtMonday": "00:00",
+    "closesAtTuesday": "00:00",
+    "closesAtWednesday": "00:00",
+    "closesAtThursday": "00:00",
+    "closesAtFriday": "00:00",
+    "closesAtSaturday": "00:00",
+    "closesAtSunday": "00:00"
   },
   "tags": [
     "Helsinki",
