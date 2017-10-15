@@ -75,7 +75,7 @@ class SimpleMap extends Component {
           onGoogleApiLoaded={({map, maps}) => this.fetchPlaces(map, maps)}
           yesIWantToUseGoogleMapApiInternals={true}
           bootstrapURLKeys={{
-            key: 'AIzaSyBivuF4JYT0fg7cFCa-Ork7fvMiMVq6ujU'
+            key: process.env.REACT_APP_GOOGLE_MAPS_APIKEY
           }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
